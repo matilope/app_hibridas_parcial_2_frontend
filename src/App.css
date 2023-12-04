@@ -1,0 +1,88 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Home */
+.banner {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  background-color: #121212;
+}
+
+.banner .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+/* Games view */
+.description {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Game view */
+.game-view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.game-view {
+  border-radius: .25rem;
+}
+
+.product-image-container img {
+  border-radius: .25rem;
+}
+
+.product-info-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+}
+
+.valoraciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.valoraciones-info {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+}
+
+.valoraciones-usuarios {
+  width:100%;
+  padding: 1rem;
+  border: 1px solid #121212;
+  border-radius: .25rem;
+}
+
+.valoraciones-usuarios-data {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
