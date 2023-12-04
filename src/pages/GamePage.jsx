@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { BasicAccordion } from "../components/Accordion";
 import StarIcon from '@mui/icons-material/Star';
-import Icon from '@mui/material/Icon';
 
 function GamePage() {
   const [game, setGame] = useState({});

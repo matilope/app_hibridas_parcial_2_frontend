@@ -21,7 +21,7 @@ const CardGame = ({ game }) => {
           {game.name}
         </Typography>
         {game.description &&
-          <Typography variant="body2" color="text.secondary" class="description">
+          <Typography variant="body2" color="text.secondary" className="description">
             {game.description}
           </Typography>
         }

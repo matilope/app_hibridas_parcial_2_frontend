@@ -12,20 +12,32 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 const route = createBrowserRouter([
   {
-    path: "",
-    element: <HomePage />
-  },
-  {
-    path: "juegos",
-    element: /*<RoutePrivate>*/<Outlet />/*</RoutePrivate>*/,
+    path: "/",
+    element: <AppMain />,
     children: [
       {
-        path: "",
-        element: <GamesPage />
-      },
-      {
-        path: ":id",
-        element: <GamePage />
+        path: '',
+        element: /*<RoutePrivate>*/<Outlet />/*</RoutePrivate>*/,
+        children: [
+          {
+            path: '',
+            element: <HomePage />,
+          },
+          {
+            path: 'juegos',
+            element: /*<RoutePrivate>*/<Outlet />/*</RoutePrivate>*/,
+            children: [
+              {
+                path: '',
+                element: <GamesPage />
+              },
+              {
+                path: ':id',
+                element: <GamePage />
+              }
+            ]
+          }
+        ]
       }
     ]
   },
@@ -39,15 +51,23 @@ const route = createBrowserRouter([
   }
 ]);
 
-function App() {
+function AppMain() {
   return (
-    <RouterProvider router={route}>
+    <>
       <Nav />
       <main className="container my-5">
         <Outlet />
       </main>
       <Footer />
-    </RouterProvider>
+    </>
+  )
+}
+
+function App() {
+  return (
+    <>
+      <RouterProvider router={route} />
+    </>
   )
 }
 
