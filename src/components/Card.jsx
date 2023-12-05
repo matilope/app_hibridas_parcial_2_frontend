@@ -18,7 +18,7 @@ const CardGame = ({ game }) => {
       />
       <CardContent className="pb-0">
         <Typography gutterBottom variant="h5" component="div">
-          {game.name}
+          <h2 className="h4 mb-2">{game.name}</h2>
         </Typography>
         {game.description &&
           <Typography variant="body2" color="text.secondary" className="description">
@@ -26,13 +26,13 @@ const CardGame = ({ game }) => {
           </Typography>
         }
       <Typography variant="body2" color="text.secondary" className="my-2">
-        Genero {game.genre}
+        <b>Género:</b> {game.genre}
       </Typography>
       <Typography variant="body2" color="text.secondary" className="my-2">
-        Creado por {membersIntoString}
+        <b>Creado por:</b> {membersIntoString}
       </Typography>
       <Typography variant="body2" color="text.secondary" className="my-2">
-        Publicado en {game.edition}
+        <b>Publicado en:</b> {game.edition}
       </Typography>
       </CardContent>
       <CardActions className="px-3">
