@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function LogInPage() {
+function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -18,7 +18,7 @@ function LogInPage() {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
-      const session = await (await fetch("http://localhost:3000/api/session", {
+      const session = await (await fetch("http://localhost:3000/api/account", {
         method: "POST",
         headers: {
           "Content-type": "application/json"
@@ -33,9 +33,10 @@ function LogInPage() {
   }
 
   return (
+    <>
     <div className="d-flex align-items-center p-3 flex-column justify-content-center vh-100">
       <div className="text-center mb-3">
-        <h1 className="display-4 bold">Iniciar sesión</h1>
+        <h1 className="display-4 bold">Registrarse</h1>
       </div>
       <div className="col-12 col-md-6 border p-4 formLogin">
         <form onSubmit={handleFormSubmit}>
@@ -52,7 +53,8 @@ function LogInPage() {
         {error && <p className="mt-3 text-danger">{error}</p>}
       </div>
     </div>
+    </>
   );
 }
 
-export default LogInPage;
+export default RegisterPage;

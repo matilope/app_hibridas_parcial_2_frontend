@@ -9,6 +9,7 @@ import LogInPage from "./pages/LoginPage";
 import RoutePrivate from "./components/RoutePrivate";
 import "./App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import RegisterPage from "./pages/RegisterPage";
 
 const route = createBrowserRouter([
   {
@@ -42,8 +43,12 @@ const route = createBrowserRouter([
     ]
   },
   {
-    path: "iniciar-sesion",
+    path: "/iniciar-sesion",
     element: <LogInPage />
+  },
+  {
+    path: "/registro",
+    element: <RegisterPage />
   },
   {
     path: "*",
