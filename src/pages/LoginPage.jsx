@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Alert from '@mui/material/Alert';
 
 function LogInPage() {
   const [email, setEmail] = useState("");
@@ -38,6 +39,9 @@ function LogInPage() {
         <h1 className="display-4 bold">Iniciar sesión</h1>
       </div>
       <div className="col-12 col-md-6 border p-4 formLogin">
+        {error &&
+          <Alert severity="error">{error}</Alert>
+        }
         <form onSubmit={handleFormSubmit}>
           <div className="mb-3">
             <label htmlFor="email" className="form-label">Correo Electrónico</label>
@@ -49,7 +53,6 @@ function LogInPage() {
           </div>
           <button type="submit" className="btn btn-primary">Enviar</button>
         </form>
-        {error && <p className="mt-3 text-danger">{error}</p>}
       </div>
     </div>
   );

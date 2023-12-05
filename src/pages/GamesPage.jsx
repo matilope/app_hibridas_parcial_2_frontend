@@ -30,7 +30,7 @@ function GamesPage() {
   }, [navigate]);
   return (
     <>
-      <h1>Listado de juegos</h1>
+      <h1 className="h1 mb-4">Listado de juegos</h1>
       <div className="row gap-3">
         {
           games?.map((game) => {
